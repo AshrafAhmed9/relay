@@ -1,0 +1,33 @@
+{
+  "name": "relay",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An operations console where every UI action has a matching WebMCP tool of identical authority. WebMCP Challenge entry.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run test:parity && tsc -p tsconfig.json && tsc -p tsconfig.worker.json && tsc -p tsconfig.scripts.json && vite build",
+    "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.worker.json && tsc -p tsconfig.scripts.json",
+    "test:parity": "tsx scripts/check-tool-parity.ts",
+    "preview": "vite preview",
+    "deploy": "npm run build && wrangler deploy",
+    "worker:dev": "wrangler dev"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "webmcp-kit": "github:AshrafAhmed9/webmcp-kit"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241127.0",
+    "@types/node": "^20.17.9",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "wrangler": "^3.99.0"
+  }
+}
