@@ -1,8 +1,8 @@
 import { useMemo, useState } from "react";
 import type { Actor } from "../cf-foundation/actor.js";
 import { resolveToolNames } from "../cf-foundation/actor.js";
-import { createActivityLog, type ConfirmFn, type DefinedTool } from "webmcp-kit";
-import { useScopedTools } from "webmcp-kit/react";
+import { createActivityLog, type ConfirmFn, type DefinedTool } from "@ashraf009/webmcp-kit";
+import { useScopedTools } from "@ashraf009/webmcp-kit/react";
 import type { DispatchStore } from "./store.js";
 import { createRelayTools, type ViewState } from "../tools/index.js";
 import { RELAY_TOOL_SCOPES } from "../shared/tool-scopes.js";

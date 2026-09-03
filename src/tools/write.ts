@@ -1,5 +1,5 @@
 import type { Actor } from "../cf-foundation/actor.js";
-import { defineTool } from "webmcp-kit";
+import { defineTool } from "@ashraf009/webmcp-kit";
 import type { DispatchStore } from "../lib/store.js";
 
 export function createWriteTools(store: DispatchStore, actor: Actor) {

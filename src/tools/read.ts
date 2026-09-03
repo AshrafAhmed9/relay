@@ -1,4 +1,4 @@
-import { defineTool } from "webmcp-kit";
+import { defineTool } from "@ashraf009/webmcp-kit";
 import type { DispatchStore } from "../lib/store.js";
 import { listConflicts } from "../shared/derive.js";
 
